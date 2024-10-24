@@ -11,6 +11,9 @@ ENV PYTHON=python3
 ENV NIXPACKS_PATH=/app/node_modules/.bin:$NIXPACKS_PATH
 COPY . /app/.
 
+# Clear NPM cache to avoid potential conflicts
+RUN npm cache clean --force
+
 # Install dependencies
 RUN --mount=type=cache,id=s/0af4a996-29b0-4d24-b652-66452d4e964e-/root/npm,target=/root/.npm npm install
 
