@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "Dockerfile",
+      "src": "./dockerfile",
       "use": "@vercel/docker",
       "config": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "./dockerfile"
       }
     }
   ],
