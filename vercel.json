@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/download",
-      "dest": "/download"
+  "builds": [{ "src": "./index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     },
-    {
-      "src": "/thumbnail",
-      "dest": "/thumbnail"
+    "commands": {
+      "install": "npm install"
     }
-  ]
+  }
 }
