@@ -12,9 +12,9 @@ ENV NIXPACKS_PATH=/app/node_modules/.bin:$NIXPACKS_PATH
 COPY . /app/.
 
 # Clear NPM cache to avoid potential conflicts
-RUN npm cache clean --force
+# RUN npm cache clean --force
 
 # Install dependencies
-RUN npm install
+# RUN npm install
 
 # Build and other steps
