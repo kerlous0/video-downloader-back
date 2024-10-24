@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "./dockerfile",
-      "use": "docker"
-    }
-  ],
   "routes": [
     {
       "src": "/download",
