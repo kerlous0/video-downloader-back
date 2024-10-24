@@ -1,10 +1,9 @@
-# Dockerfile
 FROM node:alpine
 
-# Install Python and ffmpeg
+# Install Python and FFmpeg
 RUN apk add --no-cache python3 ffmpeg
 
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
 # Copy package.json and install dependencies
@@ -15,4 +14,4 @@ RUN npm install
 COPY . .
 
 # Command to run your application
-CMD ["node", "index.js"]  # Replace with your actual entry point file
+CMD ["node", "index.js"]  # Change to your app’s entry point
